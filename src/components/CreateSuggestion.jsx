@@ -1,7 +1,7 @@
 import React from 'react'
 import CreateSuggestionForm from './CreateSuggestionForm'
 
-export default function CreateSuggestion() {
+export default function CreateSuggestion(props) {
     return (
         <>
             <div className="row justify-content-center">
@@ -9,7 +9,7 @@ export default function CreateSuggestion() {
                     <h1 className='text-center'>
                         Personalize suggestions by created a new one!</h1>
                     <div className="card-body">
-                        <CreateSuggestionForm />
+                        <CreateSuggestionForm loggedIn={props.loggedIn} flashMessage={props.flashMessage}/>
                     </div>
                 </div>
             </div>

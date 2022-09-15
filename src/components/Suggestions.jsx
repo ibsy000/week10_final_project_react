@@ -1,10 +1,21 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import CreateSuggestionButton from './CreateSuggestionButton'
 import SuggestionCards from './SuggestionCards'
 import SuggestionsButton from './SuggestionsButton'
 import SuggestionsDropDown from './SuggestionsDropDown'
+import { useNavigate } from 'react-router-dom'
 
-export default function Suggestions() {
+export default function Suggestions(props) {
+
+    let navigate = useNavigate()
+
+    useEffect(() => {
+        if (!props.loggedIn){
+            props.flashMessage('You have to be logged in to do that, silly', 'danger')
+            navigate('/login')
+        }
+    })
+
     return (
         <>
             <div className='text-center mt-3' id="header">

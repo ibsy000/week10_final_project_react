@@ -43,13 +43,13 @@ export default function App() {
                     <Route path='/' element={
                         <>
                             <Carousel />
-                            <HomePageBody />
+                            <HomePageBody loggedIn={loggedIn} flashMessage={flashMessage}/>
                         </>} />
                     <Route path='/login' element={<Login flashMessage={flashMessage}
                         login={login}/>} />
                     <Route path='/signup' element={<SignUp flashMessage={flashMessage}/>}/>
-                    <Route path='/suggestions' element={<Suggestions />} />
-                    <Route path='/create' element={<CreateSuggestion />} />
+                    <Route path='/suggestions' element={<Suggestions loggedIn={loggedIn} flashMessage={flashMessage}/>} />
+                    <Route path='/create' element={<CreateSuggestion loggedIn={loggedIn} flashMessage={flashMessage}/>} />
                 </Routes>
                 <Footer /> 
             </div> 

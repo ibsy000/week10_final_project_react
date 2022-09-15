@@ -1,10 +1,20 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import CategorySelect from './CategorySelect'
 import ParticipantsSelect from './ParticipantsSelect'
 import PriceSelect from './PriceSelect'
-// import { Link } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 
-export default function CreateSuggestionForm() {
+export default function CreateSuggestionForm(props) {
+
+    let navigate = useNavigate()
+
+    useEffect(() => {
+        if (!props.loggedIn){
+            props.flashMessage('You have to be logged in to do that, silly', 'danger')
+            navigate('/login')
+        }
+    })
+
     return (
         <>
             <div className="row">

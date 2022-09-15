@@ -15,7 +15,6 @@ export default function LoginForm(props) {
 
         let myHeaders = new Headers()
         myHeaders.append('Authorization', 'Basic ' + btoa(`${username}:${password}`))
-        console.log(btoa(`${username}:${password}`))
         
         let response = await fetch("http://localhost:5000/api/token", { 
                 method: 'POST',

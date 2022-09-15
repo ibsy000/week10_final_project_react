@@ -2,11 +2,16 @@ import React from 'react'
 import '../css/BigRedButton.css'
 import { useNavigate } from 'react-router-dom'
 
-export default function HomePageBody() {
+export default function HomePageBody(props) {
     let navigate = useNavigate()
+    
 
-    const clickDoSomethingButton = () => {
-        navigate('/suggestions')
+    const handleClick = () => {
+        {props.loggedIn ?
+            navigate('/suggestions')
+            :
+            props.flashMessage('You have to be logged in to do something, golly!', 'danger')
+        }
     }
 
     return (
@@ -14,7 +19,7 @@ export default function HomePageBody() {
             <div className="row justify-content-center">
                 <div className='display-1 text-center mt-3'>Quit Procrastinating</div>
                 <button type='button' className='col-2 m-5' id='doSomethingButton'
-                    onClick={clickDoSomethingButton}>
+                    onClick={handleClick}>
                     Do<br/>Something
                 </button>
                 <div className='display-6 text-center mb-5 mt-3'>
