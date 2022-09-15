@@ -35,7 +35,7 @@ export default function App() {
     return (
         <>
             <div className="container">
-                <Navbar />
+                <Navbar logout={logout} loggedIn={loggedIn} />
                 {message ? <FlashMessage message={message} category={category} 
                     flashMessage={flashMessage}/> : null}
                 <Routes>
