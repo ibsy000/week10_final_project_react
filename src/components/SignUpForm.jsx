@@ -38,8 +38,7 @@ export default function SignUpForm() {
                 </div>
 
                     <div className="col-5">
-                    <button type="submit" className="btn btn-primary w-100"
-                        id='submitButton'>Submit</button>
+                    <input type="submit" id='submitButton' value='Submit'/>
                     </div>
                 </form>
             </div>

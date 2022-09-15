@@ -1,12 +1,46 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import '../css/LoginForm.css'
+import { useNavigate } from 'react-router-dom'
 
-export default function LoginForm() {
+export default function LoginForm(props) {
+
+    let navigate = useNavigate()
+
+    const handleSubmit = async event => {
+        event.preventDefault()
+
+        let username = event.target.username.value
+        let password = event.target.password.value
+
+        let myHeaders = new Headers()
+        myHeaders.append('Authorization', 'Basic ' + btoa(`${username}:${password}`))
+        console.log(btoa(`${username}:${password}`))
+        
+        let response = await fetch("http://localhost:5000/api/token", { 
+                method: 'POST',
+                headers: myHeaders
+            })
+        if (response.ok){
+
+            let data = await response.json()
+
+            localStorage.setItem('token', data.token)
+            localStorage.setItem('username', username) //POSSIBLY READDRESS THIS LATER
+
+            props.login()
+
+            props.flashMessage(`Hey, ${username} thanks for logging in. Welcome back!`, 'success')
+            navigate('/')
+        } else {
+            props.flashMessage('Your username and/or password are incorrect', 'danger')
+        }
+    }
+
     return (
         <>
         <div className="row">
-            <form id='loginForm'>
+            <form id='loginForm' onSubmit={handleSubmit}>
 
                 <div className="mb-3">
                     <label className="form-label">Username</label>
@@ -28,8 +62,7 @@ export default function LoginForm() {
                 </div>
                 
                 <div className="col-5">
-                    <button type="submit" className="btn btn-primary w-100"
-                        id='submitButton'>Submit</button>
+                    <input type="submit" id='submitButton' value='Submit' />
                 </div>
             </form>
         </div>
