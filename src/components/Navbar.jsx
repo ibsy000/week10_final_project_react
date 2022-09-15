@@ -1,6 +1,6 @@
 import React from 'react'
 import logo from '../assets/android-chrome-512x512.png'
-import '../css/Nabar.css'
+import '../css/Navbar.css'
 import { Link } from 'react-router-dom'
 
 export default function Navbar() {

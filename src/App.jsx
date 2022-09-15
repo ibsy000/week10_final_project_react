@@ -16,10 +16,10 @@ export default function App() {
                         <>
                             <Carousel />
                             <HomePageBody />
-                            <Footer /> 
                         </>} />
                     <Route path='/login' element={<Login />} />
                 </Routes>
+                <Footer /> 
             </div> 
         </>
     )
