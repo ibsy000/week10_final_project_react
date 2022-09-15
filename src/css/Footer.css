@@ -3,4 +3,7 @@
     color: white;
     background-color: black;
     margin-top: 100px;
+    margin-bottom: 0;
+    width: 100%;
+    position: static;
 }

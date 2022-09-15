@@ -5,6 +5,7 @@ import HomePageBody from './components/HomePageBody'
 import Navbar from './components/Navbar'
 import { Routes, Route } from 'react-router-dom'
 import Login from './components/Login'
+import SignUp from './components/SignUp'
 
 export default function App() {
     return (
@@ -18,6 +19,7 @@ export default function App() {
                             <HomePageBody />
                         </>} />
                     <Route path='/login' element={<Login />} />
+                    <Route path='/signup' element={<SignUp />}/>
                 </Routes>
                 <Footer /> 
             </div> 
