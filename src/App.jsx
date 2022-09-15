@@ -6,6 +6,7 @@ import Navbar from './components/Navbar'
 import { Routes, Route } from 'react-router-dom'
 import Login from './components/Login'
 import SignUp from './components/SignUp'
+import Suggestions from './components/Suggestions'
 
 export default function App() {
     return (
@@ -20,6 +21,7 @@ export default function App() {
                         </>} />
                     <Route path='/login' element={<Login />} />
                     <Route path='/signup' element={<SignUp />}/>
+                    <Route path='/suggestions' element={<Suggestions />} />
                 </Routes>
                 <Footer /> 
             </div> 
