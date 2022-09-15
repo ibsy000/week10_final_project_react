@@ -8,6 +8,7 @@ import Login from './components/Login'
 import SignUp from './components/SignUp'
 import Suggestions from './components/Suggestions'
 import FlashMessage from './components/FlashMessage'
+import CreateSuggestion from './components/CreateSuggestion'
 
 export default function App() {
 
@@ -46,8 +47,9 @@ export default function App() {
                         </>} />
                     <Route path='/login' element={<Login flashMessage={flashMessage}
                         login={login}/>} />
-                    <Route path='/signup' element={<SignUp />}/>
+                    <Route path='/signup' element={<SignUp flashMessage={flashMessage}/>}/>
                     <Route path='/suggestions' element={<Suggestions />} />
+                    <Route path='/create' element={<CreateSuggestion />} />
                 </Routes>
                 <Footer /> 
             </div> 

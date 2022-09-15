@@ -7,7 +7,9 @@ export default function SuggestionsDropDown() {
         <>
             <div className="row">
                 <div className="d-flex justify-content-evenly mt-4">
-                    <CategorySelect />
+                    <div className="col-4">
+                        <CategorySelect />
+                    </div>
                     <FilterBy />
                 </div>
             </div>
