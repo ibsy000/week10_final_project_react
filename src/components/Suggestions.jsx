@@ -1,4 +1,6 @@
 import React from 'react'
+import SuggestionCards from './SuggestionCards'
+import SuggestionsButton from './SuggestionsButton'
 import SuggestionsDropDown from './SuggestionsDropDown'
 
 export default function Suggestions() {
@@ -10,6 +12,8 @@ export default function Suggestions() {
                 <h2>And go with the flow!</h2>
             </div>
             <SuggestionsDropDown />
+            <SuggestionsButton />
+            <SuggestionCards />
         </>
     )
 }
