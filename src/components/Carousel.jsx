@@ -5,6 +5,11 @@ export default function Carousel() {
         <>
         <div className="row">
             <div id="carouselExampleFade" className="carousel slide carousel-fade" data-bs-ride="carousel" >
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselExampleFade" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselExampleFade" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselExampleFade" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                </div>
                 <div className="carousel-inner">
                     <div className="carousel-item active">
                         <img src="https://via.placeholder.com/1300x400.png?text=First+Slide" className="d-block img-fluid" alt="..." />
