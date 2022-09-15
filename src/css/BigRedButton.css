@@ -1,3 +1,5 @@
+/* **************DO SOMETHING BUTTON************** */
+
 #doSomethingButton {
     padding: 50px 30px;
     font-size: 24px;
@@ -20,6 +22,9 @@
     transform: translateY(4px);
     border-color: #048757;
 }
+
+/* **************SUBMIT BUTTON************** */
+
 
 #submitButton {
     padding: 55px 30px;
@@ -45,3 +50,28 @@
     border-color: #048757;
 }
 
+
+/* **************CREATE SUGGESTION BUTTON************** */
+
+#createSuggestionButton {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 18px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+    color: #fff;
+    background-color: #4CAF50;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 9px #999;
+  }
+  
+  #createSuggestionButton:hover {background-color: #3e8e41}
+  
+  #createSuggestionButton:active {
+    background-color: #3e8e41;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+  }

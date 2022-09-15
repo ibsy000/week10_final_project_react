@@ -1,4 +1,5 @@
 import React from 'react'
+import CreateSuggestionButton from './CreateSuggestionButton'
 import SuggestionCards from './SuggestionCards'
 import SuggestionsButton from './SuggestionsButton'
 import SuggestionsDropDown from './SuggestionsDropDown'
@@ -14,6 +15,7 @@ export default function Suggestions() {
             <SuggestionsDropDown />
             <SuggestionsButton />
             <SuggestionCards />
+            <CreateSuggestionButton />
         </>
     )
 }

@@ -3,6 +3,7 @@
     width: 575px;
     height: 425px;
     perspective: 1000px;
+    margin-bottom: 25px;
 }
   
 .flip-card-inner {

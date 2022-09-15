@@ -11,7 +11,7 @@ export default function SuggestionCards() {
                             <h1 id='reveal'>Hover over card to reveal</h1>
                         </div>
                         <div className="flip-card-back">
-                            <h1>Find a quiet place with no distractions and listen to your favorite music</h1>
+                            <h1>Clean out your closet</h1>
                             <hr/>
                             <h4>Busywork</h4> 
                             <hr/>
