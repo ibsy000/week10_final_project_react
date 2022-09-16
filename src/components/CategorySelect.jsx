@@ -25,7 +25,8 @@ export default function CategorySelect() {
     })}
 
     return (
-        <>
+        <>      
+            <label className="form-select-label mb-2 ms-2"><b>Category:</b></label>
                 <select className="form-select" aria-label="Default select example">
                     <option defaultValue>Random</option>
                     {categories.map((category, idx) => {
