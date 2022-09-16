@@ -18,8 +18,12 @@ export default function Suggestions(props) {
         }
     })
 
-    const handleClick = () => {
+    const handleClickTrue = () => {
         setClicked(true)
+    }
+
+    const handleClickFalse = () => {
+        setClicked(false)
     }
 
 
@@ -31,9 +35,10 @@ export default function Suggestions(props) {
                 <h2>And go with the flow!</h2>
             </div>
             <SuggestionsDropDown />
-            <SuggestionsButton handleClick={handleClick}/>
+            <SuggestionsButton handleClickTrue={handleClickTrue} 
+                handleClickFalse={handleClickFalse} clicked={clicked}/>
             {clicked ? 
-                <SuggestionCards />
+                <SuggestionCards clicked={clicked}/>
                 :
                 <h1 className='text-center display-1'>Hit that big red button already</h1>
             }

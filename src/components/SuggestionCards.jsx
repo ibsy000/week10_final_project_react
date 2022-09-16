@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import '../css/SuggestionCards.css'
 
-export default function SuggestionCards() {
+export default function SuggestionCards(props) {
 
     const [suggestions, setSuggestions] = useState([])
 
@@ -23,7 +23,6 @@ export default function SuggestionCards() {
 
     let random_id = getRandomId(suggestions.length)
 
-    
 
     return (
         <>
