@@ -12,7 +12,7 @@ export default function CreateSuggestionButton() {
     return (
         <>
             <div className="row justify-content-between mt-5">
-                <hr/>
+                <hr className='mt-5'/>
                 <div className="col-9">
                     <h1>Want more personalized suggestions?</h1>
                     <h2>Start adding your own now!</h2>

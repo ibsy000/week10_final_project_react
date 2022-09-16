@@ -10,6 +10,7 @@ export default function HomePageBody(props) {
         {props.loggedIn ?
             navigate('/suggestions')
             :
+            navigate('/login')
             props.flashMessage('You have to be logged in to do something, golly!', 'danger')
         }
     }
