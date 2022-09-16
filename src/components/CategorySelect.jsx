@@ -31,7 +31,7 @@ export default function CategorySelect() {
                     <option defaultValue>Random</option>
                     {categories.map((category, idx) => {
                         return (
-                            <option value={idx + 1} key={idx}>{category}</option>
+                            <option value={category} key={idx}>{category}</option>
                         )}
                     )}
                 </select>

@@ -6,8 +6,8 @@ export default function CreateSuggestion(props) {
         <>
             <div className="row justify-content-center">
                 <div className="card" style={{width: '30rem'}}>
-                    <h1 className='text-center'>
-                        Personalize suggestions by created a new one!</h1>
+                    <h1 className='text-center display-6'>
+                        Personalize suggestions by creating a new one!</h1>
                     <div className="card-body">
                         <CreateSuggestionForm loggedIn={props.loggedIn} flashMessage={props.flashMessage}/>
                     </div>

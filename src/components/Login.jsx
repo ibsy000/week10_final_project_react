@@ -8,7 +8,7 @@ export default function Login(props) {
         <>
             <div className="row justify-content-center">
                 <div className="card" style={{width: '30rem'}}>
-                    <h1 className='text-center'>Get Started Doing Something</h1>
+                    <h1 className='text-center display-6'>Get Started Doing Something</h1>
                     <div className="card-body">
                         <LoginForm flashMessage={props.flashMessage} login={props.login}/>
                     </div>

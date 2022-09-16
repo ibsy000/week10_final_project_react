@@ -41,8 +41,13 @@
 
 #reveal {
     margin-top: 175px;
+    font-family: 'Rock Salt', cursive;
 }
 
 #link {
     color: white;
+}
+
+.cardBack {
+    margin: 5px;
 }
