@@ -15,33 +15,65 @@ export default function CreateSuggestionForm(props) {
         }
     })
 
+    const handleSubmit = event => {
+        event.preventDefault()
+
+        let myHeaders = new Headers()
+        let myToken = localStorage.getItem('token')
+
+        myHeaders.append("Authorization", "Bearer " + myToken)
+        myHeaders.append("Content-Type", "application/json")
+
+        let formData = JSON.stringify({
+            "activity": event.target.activity.value,
+            "category": event.target.category.value,
+            "participants": event.target.participants.value,
+            "price": event.target.price.value,
+            "link": event.target.link.value
+        })
+
+        fetch("http://localhost:5000/api/suggestions", {
+            method: 'POST',
+            headers: myHeaders,
+            body: formData
+        })
+        .then(res => res.json())
+        .then(data => {
+            if (data.error){
+                console.error(data.error)
+            } else {
+                props.flashMessage(`${data.activity} has been added to the suggestions! Hooray!`, 'success')
+                navigate('/suggestions')
+            }
+        })
+    }
+
     return (
         <>
             <div className="row">
-                <form id='signUpForm'>
+                <form id='signUpForm' onSubmit={handleSubmit}>
 
                     <div className="mb-3">
-                        <label className="form-label">Activity</label>
+                    <label className="form-select-label mb-2 ms-2"><b>Activity:</b></label>
                         <input type="text" className="form-control" id="activity" 
                             name='activity'/>
                     </div>
                     <div className="mb-3">
-                        <label className="form-label">Category</label>
                         <CategorySelect />
                     </div>
 
                     <div className="mb-3">
-                        <label className="form-label">Min. Participants Needed</label>
+                        <label className="form-select-label mb-2 ms-2"><b>Min. Participants Needed</b></label>
                         <ParticipantsSelect />
                     </div>
 
                     <div className="mb-3">
-                        <label className="form-label">Price</label>
+                        <label className="form-select-label mb-2 ms-2"><b>Price:</b></label>
                         <PriceSelect />
                     </div>
 
                     <div className="mb-3">
-                        <label className="form-label">Link</label>
+                        <label className="form-select-label mb-2 ms-2"><b>Link:</b></label>
                         <input type="text" className="form-control" id="link" 
                             name='link'/>
                     </div>

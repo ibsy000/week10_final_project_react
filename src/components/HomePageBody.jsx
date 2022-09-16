@@ -7,12 +7,9 @@ export default function HomePageBody(props) {
     
 
     const handleClick = () => {
-        {props.loggedIn ?
+        return(
             navigate('/suggestions')
-            :
-            navigate('/login')
-            props.flashMessage('You have to be logged in to do something, golly!', 'danger')
-        }
+        )
     }
 
     return (

@@ -3,7 +3,7 @@ import React from 'react'
 export default function ParticipantsSelect() {
     return (
         <>
-            <select className="form-select" aria-label="Default select example">
+            <select className="form-select" aria-label="Default select example" name='participants'>
                 <option defaultValue>Any</option>
                 <option value="1">1</option>
                 <option value="2">2</option>
