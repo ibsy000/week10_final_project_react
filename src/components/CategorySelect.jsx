@@ -15,14 +15,14 @@ export default function CategorySelect() {
 
     let categories = []
 
-    {suggestions.map((suggestion, idx) => {
+    suggestions.map((suggestion, idx) => {
         if (!categories.includes(suggestion.category)){
             categories.push(suggestion.category)
         }
         return (
             categories.sort()
         )
-    })}
+    })
 
     return (
         <>      
