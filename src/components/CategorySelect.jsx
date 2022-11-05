@@ -5,7 +5,7 @@ export default function CategorySelect() {
     const [suggestions, setSuggestions] = useState([])
 
     useEffect(() => {
-        fetch("http://localhost:5000/api/suggestions")
+        fetch("https://jelly-coral-lion.glitch.me/api/suggestions")
             .then(response => response.json())
             .then(data => {
                 let suggestionData = data

@@ -32,7 +32,7 @@ export default function CreateSuggestionForm(props) {
             "link": event.target.link.value
         })
 
-        fetch("http://localhost:5000/api/suggestions", {
+        fetch("https://jelly-coral-lion.glitch.me/api/suggestions", {
             method: 'POST',
             headers: myHeaders,
             body: formData

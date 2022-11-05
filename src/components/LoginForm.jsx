@@ -16,7 +16,7 @@ export default function LoginForm(props) {
         let myHeaders = new Headers()
         myHeaders.append('Authorization', 'Basic ' + btoa(`${username}:${password}`))
         
-        let response = await fetch("http://localhost:5000/api/token", { 
+        let response = await fetch("https://jelly-coral-lion.glitch.me/api/token", { 
                 method: 'POST',
                 headers: myHeaders
             })

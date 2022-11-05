@@ -30,7 +30,7 @@ export default function SignUpForm(props) {
                 password: password // set variable for password data at start
             })
             // submit POST request to API server
-            fetch("http://localhost:5000/api/users", {
+            fetch("https://jelly-coral-lion.glitch.me/api/users", {
                 method: 'POST',
                 headers: myHeaders,
                 body: formData
